@@ -14,7 +14,7 @@
 			<div id="content">
 				<h2 class="needs_padding">Place Your Order Here</h2>
 				<div id="em_div">
-					<p>PlaceHolder</p>
+					${signupSuccesful}
 				</div>
 			</div>
 			<div id="side_bar">
