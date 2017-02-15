@@ -12,9 +12,10 @@
 		</div>
 		<div id="main_content">
 			<div id="content">
+				${signupcomplete}
 				<h2 class="needs_padding">Place Your Order Here</h2>
 				<div id="em_div">
-					${signupcomplete}
+					
 				</div>
 			</div>
 			<div id="side_bar">

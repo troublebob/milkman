@@ -30,7 +30,9 @@
 		<input type="text" name="house" required class="inputbox" /> 
 		<br>
 		<input type="submit" id="Create account" value="Create Account" />
+		<div style="color: #FF0000;">${errorMessage}</div>
 	</form>
+	
 </body>
 
 </html>

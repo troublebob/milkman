@@ -45,6 +45,7 @@ public class SignUpController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getSession().removeAttribute("errormessage");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String confirmpassword = request.getParameter("passwordcon");
@@ -58,7 +59,7 @@ public class SignUpController extends HttpServlet {
 				try{
 					userDAO.save(user);
 				}catch (RollbackException e) {
-					request.setAttribute("System Problem", "Sorry Technical Difficulties Please try again later");
+					request.setAttribute("errormessage", "Sorry Technical Difficulties Please try again later");
 					request.getRequestDispatcher("./newuser.jsp").forward(request, response);				
 				}
 				userDAO.close();
@@ -67,11 +68,11 @@ public class SignUpController extends HttpServlet {
 				request.setAttribute("signupcomplete", "Welcome " + email +" We look forward to providing all of your dairy needs");
 				request.getRequestDispatcher("./order.jsp").forward(request, response);
 			}else{
-				request.setAttribute("PostCode Problem", "I'm sorry we are not yet delivering to that postcode");
+				request.setAttribute("errormessage", "I'm sorry we are not yet delivering to that postcode");
 				request.getRequestDispatcher("./newuser.jsp").forward(request, response);
 			}
 		}else{
-			request.setAttribute("Password Problem", "The Passwords do not match try again!");
+			request.setAttribute("errormessage", "The Passwords do not match try again!");
 			request.getRequestDispatcher("./newuser.jsp").forward(request, response);
 		}
 		

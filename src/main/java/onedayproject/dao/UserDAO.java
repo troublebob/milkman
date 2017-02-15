@@ -22,9 +22,9 @@ public class UserDAO {
 		this.em = em;
 	}
 	public void close() {
-		if(this.em != null && this.emf != null){
+		if(this.em != null){// && this.emf != null){
 			this.em.close();
-			this.emf.close();
+			//this.emf.close();
 		}
 	}
 	public void save(User user) throws RollbackException {
