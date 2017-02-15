@@ -5,13 +5,13 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  	<servlet-name>UserServlet</servlet-name>
-  	<display-name>UserServlet</display-name>
+  	<servlet-name>SignUpController</servlet-name>
+  	<display-name>SignUpController</display-name>
   	<description></description>
-  	<servlet-class>onedayproject.controller.UserServlet</servlet-class>
+  	<servlet-class>onedayproject.controller.SignUpController</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>UserServlet</servlet-name>
-  	<url-pattern>/UserServlet</url-pattern>
+  	<servlet-name>SignUpController</servlet-name>
+  	<url-pattern>/SignUpController</url-pattern>
   </servlet-mapping>
 </web-app>

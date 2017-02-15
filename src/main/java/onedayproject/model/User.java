@@ -7,7 +7,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-@org.hibernate.annotations.Entity
 @Entity
 @Table(name = "users")
 public class User {
@@ -18,12 +17,26 @@ public class User {
 	private String email_address;
 	private String password;
 	private String postcode;
+	private String house;
 	
-	public User(String email_address, String password, String postcode) {
+	public User(String email_address, String password, String postcode, String house) {
 		super();
 		this.email_address = email_address;
 		this.password = password;
 		this.postcode = postcode;
+		this.house = house;
+	}
+
+	public String getHouse() {
+		return house;
+	}
+
+	public void setHouse(String house) {
+		this.house = house;
+	}
+
+	public User() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getId() {

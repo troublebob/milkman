@@ -19,7 +19,9 @@ public class Order {
 	@OneToOne
 	@JoinColumn(name = "user_id")
 	private User user;
-	
+	public Order() {
+		// TODO Auto-generated constructor stub
+	}
 	public Order(User user) {
 		super();
 		this.user = user;

@@ -16,6 +16,9 @@ public class Product {
 	private String name;
 	private double price;
 	
+	public Product() {
+		// TODO Auto-generated constructor stub
+	}
 	public Product(String name, double price) {
 		super();
 		this.name = name;

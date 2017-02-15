@@ -25,7 +25,9 @@ public class OrderItem {
 	private Product product;
 	
 	private int quantity;
-	
+	public OrderItem() {
+		// TODO Auto-generated constructor stub
+	}
 	public OrderItem(Order order, Product product, int quantity) {
 		super();
 		this.order = order;
